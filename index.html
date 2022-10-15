@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ant game </title>
+        <link rel="styleheet" href="style.css">
+        <style>
+            *{
+    margin: 0;
+    
+    box-sizing: border-box;
+    font-family: sans-serif;
+    cursor: none;
+    
+   
+    
+    
+
+
+}
+
+.cursor{
+    position:absolute;
+    height: 70px;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    z-index: 2;
+    transition: 0.3s tranform erase;
+    transform-origin: 100% 100%;
+   
+}
+
+body{
+    background-image: url("icons/bg.jpg"); 
+    height: 100vh;
+  
+  
+}   
+
+button{
+    color: white;
+    border: 2px solid white;
+    padding: 15px 45px;
+    outline: none;
+    cursor: none;
+    background:transparent
+            }
+
+    .container{
+        position: absolute;
+  
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .bloodSpot{
+        position: fixed;
+        height: 80px;
+        z-index: 2;
+        transform: translate(-50%,-50%);
+    }
+
+    img::selection{
+        background: transparent;
+    }
+
+    .ant_right{
+        width: 100px;
+        height: 100px;
+        z-index: 5;
+        position: center;
+        top: 0px;
+
+        animation: block 5s infinite;
+        opacity: 1;
+
+
+    }
+
+    @keyframes block{
+        from{transform: translateX(-500px);}
+        to{transform: translateX(60px);}
+    }
+
+    .hole{
+        height: 100px;
+        
+    }
+
+    .div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+        padding-left: 100px;
+
+    }
+
+    
+        </style>
+
+
+        
+
+
+    </head>
+    <body>
+        <img src="/icons/blood.png" class="bloodSpot">
+        
+        
+
+        <div class="container">
+            <div id="ant-c" class="ant_container">
+                
+                <img id="ant"class="ant_right" src="/icons/ant_right.png" "></div>
+            
+            
+            <img src="/icons/crosshair.png" class="cursor">
+            <img src="/icons/hole.png" class="hole">
+            
+            
+            <div class="hole-container">
+                <!-- <button type="button">START GAME</button> -->
+                
+            </div>
+            
+
+            <div id="block"></div>
+
+
+
+
+        </div>
+        <div class="div">
+            <h1 id="increment">0</h1>
+            <div id="ant" onclick="incrementButton()"></div>
+        </div>
+       
+       
+       
+
+    </body>
+    
+   
+    <script>
+        
+    </script>
+    <script src="index.js"></script>
+   
+    
+    
+</html>
